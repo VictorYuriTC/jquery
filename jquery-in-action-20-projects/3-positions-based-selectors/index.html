@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../jquery-3.6.1.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#btnEvenOdd').click(function() {
+        $('li:even, p:odd').css('color', 'red')
+      })
+
+      $('#btnEq').click(function() {
+        $('li:eq(3)').css('background-color', 'cyan')
+      })
+
+      $('#btnLt').click(function() {
+        $('li:lt(2)').css('height', '2rem')
+      })
+
+      $('#btnGt').click(function() {
+        $('li:gt(2)').css('background-color', 'lime')
+      })
+
+
+    })
+  </script>
+</head>
+<body>
+  <p id="first para">First Paragraph. First Paragraph</p>
+  <ol">
+    <li>John Smith</li>
+    <li>Aaron White</li>
+    <li>Sarah Brown</li>
+    <li>Aidan Jones</li>
+    <li>Maria Williams</li>
+  </ol>
+
+  <p> Last Pragraph. Last Paragraph</p>
+
+  <button id="btnEvenOdd">
+    Change even and odd indexes
+  </button>
+
+  <button id="btnEq">
+    Change selectors with equal (eq)
+  </button>
+
+  <button id="btnLt">
+    Change selectors with less than (lt)
+  </button>
+
+  <button id="btnGt">
+    Change selectors with greater than (gt)
+  </button>
+</body>
+</html>
