@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../jquery-3.6.1.min.js"></script>
+  <script>
+    $(document).ready(() => {
+
+      $('#btnClass').click(function() {
+        $('[class]').css('color', 'red')
+      })
+
+      $('#btnId').click(function() {
+        $('p[class!=paras]').css('color', 'blue')
+      })
+
+      $('#btnFirstChars').click(function() {
+        $('[id ^= first]').css('background-color', 'lime')
+      })
+
+      $('#btnLastChars').click(function() {
+        $('[id $= div]').css('background-color', 'yellow')
+      })
+
+      $('#btnWildcardChars').click(function() {
+        $('[id *= ar]')
+          .css('width', '8rem')
+          .css('height', '4rem')
+      })
+
+      $('#firstBtnSearchWord').click(function() {
+        $('[id |= first]').css('font-weight', '900')
+      })
+    })
+  </script>
+</head>
+<body>
+  <p id="first-para" class="paras">First Paragraph</p>
+  <p id="second-para">Second Paragraph</p>
+  <p id="third-para">Third Paragraph</p>
+  <div id="first-div">First Div</div>
+  <div id="second-div" class="div">Second Div</div>
+  <div id="third-div">Third Div</div>
+  <button id="btnClass">Change elements with class attribute</button>
+  <button id="btnId">Change elements with id attribute</button>
+  <button id="btnFirstChars">
+    Change elements with specified attribute first chars
+  </button>
+  <button id="btnLastChars">
+    Change elements with specified attribute last chars
+  </button>
+  <button id="btnWildcardChars">
+    Change elements which includes chars
+  </button>
+  <button id="firstBtnSearchWord">
+    Change elements which have a specified word
+  </button>
+</body>
+</html>
