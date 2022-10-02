@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../jquery-3.6.1.min.js"></script>
+
+  <script>
+    $(document).ready(() => {
+      $('#btnAllSelectors').click(() => {
+        $('*').css('color', 'red')
+      })
+
+      $('#btnTagname').click(() => {
+        $('li').css('background-color', 'yellow')
+      })
+
+      $('#btnMultiple').click(() => {
+        $('li, body').css('background-color', 'cyan')
+      })
+
+      $('#btnId').click(() => {
+        $('#sub1, #sub3').css('color', 'purple')
+      })
+
+      $('.btnClass').click(() => {
+        $('.even').css('background-color', 'lime')
+      })
+
+      $('#btnThis').click(function() {
+        $(this)
+          .css('background-color', 'blue')
+          .css('color', 'white')
+      })
+    })
+  </script>
+
+</head>
+<body>
+  <ol>
+    <li id="sub1">English</li>
+    <li id="sub2" class="even">Mathematics</li>
+    <li id="sub3">Physics</li>
+    <li id="sub4" class="even">Chemistry</li>
+    <li id="sub5">History</li>
+    <li id="sub6" class="even">Geography</li>
+  </ol>
+
+  <button id="btnAllSelectors">
+    Change all text colors
+  </button>
+
+  <button id="btnTagname">
+    Tagname background color
+  </button>
+
+  <button id="btnMultiple">
+    Multiple selectors
+  </button>
+
+  <button id="btnId">
+    Change sub1 and sub3 color
+  </button>
+
+  <button class="btnClass">
+    Change even numbers font-weight by class
+  </button>
+
+  <button id="btnThis">
+    Change this element by color
+  </button>
+</body>
+</html>
