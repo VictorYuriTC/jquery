@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../jquery-3.6.1.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#btnFirstChildP').click(function() {
+        $('p:first-child').hide(2000)
+      })
+
+      $('#btnFirstChildSpan').click(function() {
+        $('span:first-child').hide(2000)
+      })
+
+      $('#btnLastChildP').click(function() {
+        $('p:last-child').hide(2000)
+      })
+
+      $('#btnNthChild').click(function() {
+        $('div:nth-child(2)').hide(2000)
+      })
+
+      $('#btnNthLastChild').click(function() {
+        $('div:nth-last-child(2)').hide(2000)
+      })
+
+      $('#btnFirstOfType').click(function() {
+        $('p:first-of-type').hide(2000)
+      })
+
+      $('#btnNthOfType').click(function() {
+        $('p:nth-of-type(1)').hide(2000)
+      })
+
+      $('#btnNthLastOfType').click(function() {
+        $('p:nth-last-of-type(1)').hide(2000)
+      })
+
+      $('#btnOnlyChild').click(function() {
+        $('span:only-child').hide(2000)
+      })
+
+      $('#btnOnlyOfType').click(function() {
+        $('div:only-of-type').hide(2000)
+      })
+    })
+  </script>
+</head>
+<body>
+  <div style="background-color: gray;" id="main">
+    <p style="background: red; color: white; font-weight: 600 ;width: 5rem; height: 2rem; border: solid black 1px; padding: 10px;">
+      Paragraph
+    </p>
+    <div style="background: lime; width: 2rem; height: 2rem; border: solid black 1px; padding: 10px">
+      Div
+    </div>
+    <span style="background: cyan; width: 3rem; height: 4rem; border: solid black 1px; padding: 10px">
+      Span
+    </span>
+  </div>
+
+  <div style="background-color: gray;" id="sub">
+    <span style="background: cyan; width: 3rem; height: 1rem; border: solid black 1px; padding: 10px">
+      Span
+    </span>
+    <div style="background: lime; width: 2rem; height: 2rem; border: solid black 1px; padding: 10px">
+      Div
+    </div>
+    <div style="width: 10rem; height: 5rem">
+      <span style="background: cyan; width: 3rem; height: 1rem; border: solid black 1px; padding: 10px">
+        Span
+      </span>
+    </div>
+    <p style="background: red; color: white; font-weight: 600 ;width: 5rem; height: 2rem; border: solid black 1px; padding: 10px;">
+      Paragraph
+    </p>
+  </div>
+
+  <button id="btnFirstChildP">
+    Change first paragraph child
+  </button>
+
+  <button id="btnFirstChildSpan">
+    Change first span child
+  </button>
+
+  <button id="btnLastChildP">
+    Change last paragraph child
+  </button>
+
+  <button id="btnNthChild">
+    Change nth child
+  </button>
+
+  <button id="btnNthLastChild">
+    Change nth last child
+  </button>
+
+  <button id="btnFirstOfType">
+    Change first of type
+  </button>
+
+  <button id="btnNthOfType">
+    Change nth of type
+  </button>
+
+  <button id="btnNthLastOfType">
+    Change nth last of type
+  </button>
+
+  <button id="btnOnlyChild">
+    Change only child
+  </button>
+
+  <button id="btnOnlyOfType">
+    Change only of type
+  </button>
+</body>
+</html>
