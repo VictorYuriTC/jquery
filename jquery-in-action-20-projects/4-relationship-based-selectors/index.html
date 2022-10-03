@@ -47,6 +47,23 @@
       $('#btnOnlyOfType').click(function() {
         $('div:only-of-type').hide(2000)
       })
+
+      $('#btnDirect').click(function() {
+        $('div > span').hide(2000)
+      })
+
+      $('#btnDescendant').click(function() {
+        $('div div').hide(2000)
+      })
+
+      $('#btnAdjacent').click(function() {
+        $('div + div').hide(2000)
+      })
+
+      $('#btnGeneralSibling').click(function() {
+        $('span ~ div').hide(2000)
+      })
+      
     })
   </script>
 </head>
@@ -118,6 +135,22 @@
 
   <button id="btnOnlyOfType">
     Change only of type
+  </button>
+
+  <button id="btnDirect">
+    Change direct children
+  </button>
+
+  <button id="btnDescendant">
+    Change descendant children
+  </button>
+
+  <button id="btnAdjacent">
+    Change adjacent siblings
+  </button>
+
+  <button id="btnGeneralSibling">
+    Change general sibling
   </button>
 </body>
 </html>
