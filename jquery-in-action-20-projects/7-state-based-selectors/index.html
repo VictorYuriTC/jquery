@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../jquery-3.6.1.min.js"></script>
+</head>
+<body>
+  <form action="">
+    <label for="">
+      Name:
+      <input type="text" id="user" hidden>
+      <br>
+    </label>
+  
+    <label for="uName">
+      Username:
+      <input type="text" id="uName">
+    </label>
+  
+    <label for="pwd">
+      Password:
+      <input type="password" id="pwd">
+    </label>
+  
+    <label for="gender">
+      Gender:
+      <label for="">
+        Female
+        <input type="radio" name="sex" value="f">
+      </label>
+  
+      <label for="">
+        Male
+        <input type="radio" name="sex" value="m" checked>
+      </label>
+  
+      <label for="">
+        <input type="reset">
+      </label>
+    </label>
+
+    <label for="">
+      <select name="" id="">
+        <option value="Dahlias" selected>
+          Dahlias
+        </option>
+        <option value="Tulips">
+          Tulips
+        </option>
+      </select>
+    </label>
+  
+    <button id="btnHidden">
+      Turn elements visible
+    </button>
+  </form>
+
+  <button id="btnVisible">
+    Turn elements hidden
+  </button>
+
+  <button id="btnDisabled">
+    Hide disabled buttons
+  </button>
+
+  <button id="btnEnabled">
+    Change enabled inputs background color
+  </button>
+
+  <button id="btnChecked">
+    Hide checked elements
+  </button>
+
+  <button disabled>
+    This button is disabled
+  </button>
+
+  <div style="width:100px; height: 100px; background: pink; margin: 5px; padding: 5px"></div>
+  <div id="box" style="width:100px; height: 100px; background: pink; margin: 5px; padding: 5px"></div>
+  <div style="width:100px; height: 100px; background: pink; margin: 5px; padding: 5px"></div>
+  
+  <button id="btnDivs">
+    Change animated div background color
+  </button>
+
+  <script>
+    const submitFormButton = document.getElementById('btnHidden')
+
+    submitFormButton.addEventListener('click', (e) => {
+      e.preventDefault()
+    })
+  </script>
+
+  <script>
+    $(document).ready(function() {
+      $('#btnHidden').click(function() {
+        $(':hidden').show(2000)
+      })
+
+      $('#btnVisible').click(function() {
+        $(':visible').hide(2000)
+      })
+
+      $('#btnDisabled').click(function() {
+        $(':disabled').hide(2000)
+      })
+
+      $('#btnEnabled').click(function() {
+        $(':enabled').css('background', 'lime')
+      })
+
+      $('#btnChecked').click(function() {
+        $(':checked').hide(2000)
+      })
+
+      function animating() {
+        $('#box').slideToggle(5000)
+      }
+      animating()
+
+      $('#btnDivs').click(function() {
+        $('div:animated').css('background', 'purple')
+      })
+    })
+  </script>
+</body>
+</html>
