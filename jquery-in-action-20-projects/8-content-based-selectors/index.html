@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../jquery-3.6.1.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#btnContains').click(function() {
+        $('p:contains(First)').css('background', 'red')
+      })
+
+      $('#btnHas').click(function() {
+        $('span:has(div)').css('background', 'lime')
+      })
+
+      $('#btnEmpty').click(function() {
+        $(':empty').css('background', 'aliceblue')
+      })
+      
+      $('#btnParent').click(function() {
+        $(':parent').css('color', 'green')
+      })
+
+      $('#btnNotParent').click(function() {
+        $(':not(:parent)').css('background', 'turquoise')
+      })
+    })
+  </script>
+</head>
+<body>
+  <div>
+    <p>First paragraph</p>
+    <span>First span</span>
+    <div
+      class="first"
+      style="background: yellow; border: black solid 1px; width: 40px; height: 40px"></div>
+    <span>Second span</span>
+
+    <span style="display:flex;background-color: red; padding: 1rem; border: black solid 1px">
+      Span
+      <div style="background-color: blue; color: white">
+        Div
+      </div>
+    </span>
+  </div>
+
+  <div>
+    <p>First paragraph</p>
+    <span>First span</span>
+    <div class="first"></div>
+    <span>Second span</span>
+
+    <p>Second paragraph</p>
+
+    <p>Third paragraph</p>
+  </div>
+
+  <button id="btnContains">
+    Change elements by its content
+  </button>
+
+  <button id="btnHas">
+    Change elements whice have html elements inside it
+  </button>
+
+  <button id="btnEmpty">
+    Change empty elements
+  </button>
+
+  <button id="btnParent">
+    Change all parents element
+  </button>
+
+  <button id="btnNotParent">
+    Change all elements whice are not parents
+  </button>
+</body>
+</html>
