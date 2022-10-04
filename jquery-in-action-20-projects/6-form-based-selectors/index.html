@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../jquery-3.6.1.min.js"></script>
+</head>
+<body>
+  <form action="">
+    <label for="">
+      Name:
+      <input type="text" id="user">
+      <br>
+    </label>
+  
+    <label for="uName">
+      Username:
+      <input type="text" id="uName">
+    </label>
+  
+    <label for="pwd">
+      Password:
+      <input type="password" id="pwd">
+    </label>
+  
+    <label for="gender">
+      Gender:
+      <label for="">
+        Female
+        <input type="radio" name="sex" value="f">
+      </label>
+  
+      <label for="">
+        Male
+        <input type="radio" name="sex" value="m" checked>
+      </label>
+  
+      <label for="">
+        <input type="reset">
+      </label>
+    </label>
+  
+    <button id="btnForm">
+      Change element by form role
+    </button>
+  </form>
+
+  <script>
+    const submitFormButton = document.getElementById('btnForm')
+
+    submitFormButton.addEventListener('click', (e) => {
+      e.preventDefault()
+    })
+  </script>
+
+  <script>
+    $(document).ready(function() {
+      $('#btnForm').click(function() {
+        $(':button').css('color', 'white')
+        $(':button').css('background', 'cyan')
+        $(':text').css('background', 'blue')
+        $(':reset').css('background', 'lime')
+        $(':radio').css('height', '4rem')
+        $(':password').css('border', 'black solid 10px')
+        alert(`There are ${$(':radio').length} inputs here`)
+      })
+    })
+  </script>
+</body>
+</html>
