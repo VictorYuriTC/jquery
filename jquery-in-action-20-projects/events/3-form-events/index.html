@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../../jquery-3.6.1.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(':text').focus(function() {
+        $(this).css('background', 'gray')
+      })
+
+      $(':text').blur(function() {
+        $(this).css('background', 'white')
+      })
+
+      $('fieldset').focusin(function() {
+        $(this).css('background', 'blue')
+      })
+
+      $('fieldset').focusout(function() {
+        $(this).css('background', 'white')
+      })
+    })
+  </script>
+</head>
+<body>
+  <form>
+    <fieldset style="width: 200px;">
+      <legend><b>Personal</b></legend>
+      <input type="text" id="firstName" placeholder="First Name"><br><br>
+      <input type="text" id="lastName" placeholder="Last Name"><br><br>
+      <input type="button" id="btnSubmit" value="Submit">
+    </fieldset>
+  </form>
+</body>
+</html>
