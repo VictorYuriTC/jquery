@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../../jquery-3.6.1.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(window).resize(function() {
+        $('div:first').text(`Width: ${$(window).width()}. Heigth: ${$(window).height()}`)
+      })
+      let scrolledTimes = 0
+
+      $(window).scroll(function() {
+        $('div:eq(1)').text(`Scroll: ${scrolledTimes }`)
+        scrolledTimes += 1
+      })
+    })
+  </script>
+</head>
+<body>
+  <div>
+
+  </div>
+  <div>
+    Change window size in order to see windows size on screen
+  </div>
+  <p>lorem</p>
+  <p>lorem</p>
+  <p>lorem</p>
+  <p>lorem</p>
+  <p>lorem</p>
+  <p>lorem</p>
+  <p>lorem</p>
+  <p>lorem</p>
+  <p>lorem</p>
+  <p>lorem</p>
+  <p>lorem</p>
+  <p>lorem</p>
+  <p>lorem</p>
+  <p>lorem</p>
+  <p>lorem</p>
+  <p>lorem</p>
+  <p>lorem</p>
+  <p>lorem</p>
+  <p>lorem</p>
+  <p>lorem</p>
+  <p>lorem</p>
+  <p>lorem</p>
+  <p>lorem</p>
+  <p>lorem</p>
+  <p>lorem</p>
+  <p>lorem</p>
+  <p>lorem</p>
+  <p>lorem</p>
+  <p>lorem</p>
+  <p>lorem</p>
+</body>
+</html>
