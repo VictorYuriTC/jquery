@@ -17,11 +17,23 @@
       })
 
       $('fieldset').focusin(function() {
-        $(this).css('background', 'blue')
+        $(this).css('background', 'aliceblue')
       })
 
       $('fieldset').focusout(function() {
         $(this).css('background', 'white')
+      })
+
+      $(':text').change(function() {
+        $('#result').text($(this).val()).show().fadeOut(3000)
+      })
+
+      $(':text').select(function() {
+        $(this).css('background', 'lime')
+      })
+
+      $('form').submit(function() {
+        alert(`${$('#salutation').val()}. ${$('[name=firstName]').val()} ${$('#lastName').val()}`)
       })
     })
   </script>
@@ -30,9 +42,25 @@
   <form>
     <fieldset style="width: 200px;">
       <legend><b>Personal</b></legend>
-      <input type="text" id="firstName" placeholder="First Name"><br><br>
-      <input type="text" id="lastName" placeholder="Last Name"><br><br>
-      <input type="button" id="btnSubmit" value="Submit">
+      <select id="salutation">
+        <option value="Mr">Mr.</option>
+        <option value="Miss">Miss.</option>
+        <option value="Ms">Ms.</option>
+        <option value="Mrs">Mrs.</option>
+      </select>
+
+      <label for="">
+        First Name
+        <input type="text" name="firstName" placeholder="First Name">
+      </label>
+
+      <label for="">
+        Last Name
+        <input type="text" id="lastName" placeholder="Last Name">
+      </label>
+      
+      <input type="submit" id="btnSubmit" value="Submit">
+      <div id="result"></div>
     </fieldset>
   </form>
 </body>
